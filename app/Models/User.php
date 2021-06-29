@@ -52,7 +52,9 @@ class User extends Authenticatable
                 'title' => $user->username
             ]);
 
-            Email::to($user->email)->send(NewUserWelcomeMail());
+            //Can't seem to get email to work. Error is 
+            // Class "App\Models\Email" not found. 
+            // Email::to($user->email)->send(NewUserWelcomeMail());
 
         });
     }
